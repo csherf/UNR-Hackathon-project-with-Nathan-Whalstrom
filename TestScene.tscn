@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SpookyMan.tscn" type="PackedScene" id=2]
+[ext_resource path="res://test-nav.glb" type="PackedScene" id=3]
 
 [sub_resource type="SphereMesh" id=1]
 
 [node name="TestScene" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.20455, 0, -2.84764 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.8129 )
@@ -32,3 +35,12 @@ material/0 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20067, 0, -7.75317 )
 mesh = SubResource( 1 )
 material/0 = null
+
+[node name="SpookyMan" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.47598, 0, -4.30732 )
+
+[node name="Navigation" type="Navigation" parent="." groups=[
+"MainNav",
+]]
+
+[node name="test-nav" parent="Navigation" instance=ExtResource( 3 )]
