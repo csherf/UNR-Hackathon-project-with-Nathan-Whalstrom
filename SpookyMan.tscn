@@ -13,4 +13,5 @@ albedo_texture = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Billboard" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.494303, 0 )
 material/0 = SubResource( 1 )
