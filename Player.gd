@@ -1,11 +1,13 @@
 extends KinematicBody
 
 const UP = Vector3(0, 1.0, 0)
-const sprintSpeed = 2
+const sprint_speed = 2
 
 export var speed = 1.7
 export var look_speed = 0.5 / 9000.0
-onready var sprintResource = $CanvasLayer/outline/background/resource_bar
+onready var sprint_resource = $CanvasLayer/outline/background/resource_bar
+
+var sprinting = false;
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -25,10 +27,12 @@ func _physics_process(delta):
 		move -= transform.basis.x
 	elif Input.is_action_pressed("move_left"):
 		move += transform.basis.x
-	if Input.is_action_pressed("sprint"):
-		sprinting = true
-	if Input.is_action_just_released("sprint"):	
-		sprinting = false
-	move_and_slide(move * speed, UP);
+		
+	sprinting = Input.is_action_pressed("sprint")
+	
+	if sprinting:
+		move_and_slide(move * sprint_speed, UP)
+	else:
+		move_and_slide(move * speed, UP)
 	
 
