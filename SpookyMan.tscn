@@ -13,5 +13,10 @@ albedo_texture = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Billboard" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.494303, 0 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 1, 0, 1.43122, 0 )
 material/0 = SubResource( 1 )
+
+[node name="Anim" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+[connection signal="timeout" from="Anim" to="." method="_on_Anim_timeout"]

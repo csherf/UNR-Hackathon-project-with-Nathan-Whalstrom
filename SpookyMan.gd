@@ -16,3 +16,7 @@ func _physics_process(delta):
 			move = (path[1] - translation).normalized() * move_speed
 	move_and_slide(move, UP)
 		
+
+
+func _on_Anim_timeout():
+	$Billboard.scale.x *= -1
