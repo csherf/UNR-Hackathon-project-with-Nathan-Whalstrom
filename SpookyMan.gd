@@ -1,4 +1,4 @@
-extends KinematicBody
+extends Area
 
 const UP = Vector3(0, 1.0, 0)
 
@@ -11,10 +11,13 @@ func _physics_process(delta):
 	var player = Util.from_group("Player", self)
 	var nav = Util.from_group("MainNav", self)
 	if nav != null and player != null:
-		var path = nav.get_simple_path(translation, player.translation)
-		if path.size() >= 2:
-			move = (path[1] - translation).normalized() * move_speed
-	move_and_slide(move, UP)
+		var path = nav.get_simple_path(translation, player.translation, false)
+		for i in range(path.size() - 1):
+			if (path[i + 1] - translation).length() > move_speed * delta:
+				move = (path[i + 1] - translation).normalized() * move_speed
+				print_debug(i)
+			
+	translation += move * delta
 		
 
 
