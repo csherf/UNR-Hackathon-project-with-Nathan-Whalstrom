@@ -2,10 +2,11 @@ extends KinematicBody
 
 const UP = Vector3(0, 1.0, 0)
 
-export var sprint_speed = 10
-export var speed = 5
+export var sprint_speed = 4
+export var speed = 1.7
 export var look_speed = 0.5 / 9000.0
 onready var sprint_resource = $CanvasLayer/outline/background/resource_bar
+var tired = false
 
 var sprinting = false
 
@@ -28,13 +29,21 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("move_left"):
 		move += transform.basis.x
 	sprinting = Input.is_action_pressed("sprint")
-	if sprinting:
-		if (sprint_resource.rect_scale.x > 0):
+	if (sprint_resource.rect_scale.x <= 0):
+		tired = true
+		$Timer.start()
+		
+	if (sprint_resource.rect_scale.x > 0 && sprinting && !tired):
 			sprint_resource.rect_scale.x -= .01
 			move_and_slide(move * sprint_speed, UP)
 	else:
 		if (sprint_resource.rect_scale.x < 1):
-			sprint_resource.rect_scale.x += .01
+			sprint_resource.rect_scale.x += .005
 		move_and_slide(move * speed, UP)
 	
 
+
+
+func _on_Timer_timeout():
+	tired = false
+	pass # Replace with function body.
