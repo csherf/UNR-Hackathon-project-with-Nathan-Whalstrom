@@ -43,6 +43,5 @@ func _physics_process(delta):
 	
 
 
-
 func _on_Timer_timeout():
 	tired = false

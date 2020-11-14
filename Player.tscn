@@ -1,9 +1,26 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="CylinderShape" id=1]
 radius = 0.5
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 2
+outline_color = Color( 0.00392157, 0.00392157, 0.00392157, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
 
 [node name="Player" type="KinematicBody" groups=[
 "Player",
@@ -52,4 +69,47 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="Tasks" type="Label" parent="."]
+anchor_right = 0.088
+anchor_bottom = 0.142
+margin_right = -0.112007
+margin_bottom = -0.200005
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.964706, 0.964706, 1 )
+text = "Tasks
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="collect_paper" type="Label" parent="Tasks"]
+anchor_left = 0.1
+anchor_top = 0.471
+anchor_right = 2.289
+anchor_bottom = 0.635
+margin_top = -0.0349998
+margin_right = -0.0100098
+margin_bottom = 0.0249939
+custom_fonts/font = SubResource( 3 )
+text = "- Collect paper from printers: 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shutdown_computers" type="Label" parent="Tasks"]
+anchor_left = 0.099
+anchor_top = 0.737
+anchor_right = 2.544
+anchor_bottom = 0.996
+margin_left = 0.0338469
+margin_top = 0.0182343
+margin_right = -0.0161591
+margin_bottom = 0.00323486
+custom_fonts/font = SubResource( 4 )
+text = "- Turn of computers: 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
