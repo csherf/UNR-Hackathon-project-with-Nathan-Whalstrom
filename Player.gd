@@ -2,8 +2,8 @@ extends KinematicBody
 
 const UP = Vector3(0, 1.0, 0)
 
-export var sprint_speed = 3
-export var speed = 1.7
+export var sprint_speed = 10
+export var speed = 5
 export var look_speed = 0.5 / 9000.0
 onready var sprint_resource = $CanvasLayer/outline/background/resource_bar
 
