@@ -27,12 +27,14 @@ func _physics_process(delta):
 		move -= transform.basis.x
 	elif Input.is_action_pressed("move_left"):
 		move += transform.basis.x
-		
 	sprinting = Input.is_action_pressed("sprint")
-	
 	if sprinting:
-		move_and_slide(move * sprint_speed, UP)
+		if (sprint_resource.rect_scale.x > 0):
+			sprint_resource.rect_scale.x -= .01
+			move_and_slide(move * sprint_speed, UP)
 	else:
+		if (sprint_resource.rect_scale.x < 1):
+			sprint_resource.rect_scale.x += .01
 		move_and_slide(move * speed, UP)
 	
 
