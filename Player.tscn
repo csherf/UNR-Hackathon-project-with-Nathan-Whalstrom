@@ -5,14 +5,17 @@
 [sub_resource type="CylinderShape" id=1]
 radius = 0.5
 
-[node name="Player" type="KinematicBody"]
+[node name="Player" type="KinematicBody" groups=[
+"Player",
+]]
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00611, 0 )
 shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.602251, 0 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 1.70067, 0 )
 near = 0.01
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
