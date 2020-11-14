@@ -12,27 +12,27 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.20455, 0, -2.84764 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.8129 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.23561, -2.8129 )
 mesh = SubResource( 1 )
 material/0 = null
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63377, 0, -0.501505 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63377, 2.47901, -0.501505 )
 mesh = SubResource( 1 )
 material/0 = null
 
 [node name="MeshInstance3" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45972, 0, 1.50561 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45972, 2.50445, 1.50561 )
 mesh = SubResource( 1 )
 material/0 = null
 
 [node name="MeshInstance4" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3005, 0, 2.32743 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3005, 4.11695, 2.32743 )
 mesh = SubResource( 1 )
 material/0 = null
 
 [node name="MeshInstance5" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20067, 0, -7.75317 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20067, 3.3529, -7.75317 )
 mesh = SubResource( 1 )
 material/0 = null
 
