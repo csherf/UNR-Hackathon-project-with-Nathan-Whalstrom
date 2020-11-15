@@ -93,7 +93,7 @@ margin_top = 110.398
 margin_right = -106.521
 margin_bottom = -339.602
 custom_fonts/font = SubResource( 3 )
-text = "GAMEOVER
+text = "GAME OVER!!!!
 
 you have been convicted of tax fraud"
 __meta__ = {
@@ -107,7 +107,7 @@ margin_left = 391.0
 margin_top = 334.0
 margin_right = -402.0
 margin_bottom = -214.0
-text = "try again"
+text = "do again"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
