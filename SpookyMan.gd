@@ -4,8 +4,21 @@ const UP = Vector3(0, 1.0, 0)
 
 export var look_offset = Vector3(0, 1.75, 0);
 export var move_speed = 2.0
+export var tax_fraud_power = 500.0
+export var tax_cooldown = 0.5
+
 var active = false
 var target = Vector3.ZERO
+
+var tax_fraud = false
+var tax_fraud_intensity = 1.0
+
+func _process(delta):
+	if tax_fraud:
+		$CanvasLayer/Control/Jumpscare2.rect_position = tax_fraud_intensity * tax_fraud_power * Vector2(randf() - 0.5, randf() - 0.5)
+		tax_fraud_intensity -= delta * tax_cooldown
+		if tax_fraud_intensity < 0:
+			tax_fraud_intensity = 0
 
 func _physics_process(delta):
 	if(active): 
@@ -39,3 +52,15 @@ func _on_Anim_timeout():
 
 func _on_SpookyMan_body_entered(body):
 	$CanvasLayer/Control/Jumpscare.visible = true
+	tax_fraud = true
+	$Timer.start()
+
+
+func _on_Timer_timeout():
+	$CanvasLayer/Control/Jumpscare.visible = false
+	$CanvasLayer/Control/Jumpscare2.visible = true
+	$Exit_timer.start()
+
+
+func _on_Exit_timer_timeout():
+	pass

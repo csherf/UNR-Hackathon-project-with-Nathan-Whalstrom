@@ -59,11 +59,35 @@ __meta__ = {
 visible = false
 anchor_right = 25.532
 anchor_bottom = 15.244
-margin_right = 0.719971
+margin_right = 0.720703
 texture = ExtResource( 5 )
 stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Control2" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 311.549
+margin_top = 237.997
+margin_right = -233.451
+margin_bottom = -227.003
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Exit_timer" type="Timer" parent="."]
+wait_time = 7.0
 [connection signal="body_entered" from="." to="." method="_on_SpookyMan_body_entered"]
 [connection signal="timeout" from="Anim" to="." method="_on_Anim_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Exit_timer" to="." method="_on_Exit_timer_timeout"]
