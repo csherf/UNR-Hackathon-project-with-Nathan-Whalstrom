@@ -10,6 +10,11 @@ var tired = false
 
 var sprinting = false
 
+
+var computers_left = 0
+
+
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -18,6 +23,14 @@ func _input(event):
 		rotation_degrees.y -= event.relative.x * OS.get_real_window_size().x * look_speed
 
 func _physics_process(delta):
+	
+	if Input.is_action_just_pressed("click"):
+		print_debug("click")
+		var clickable = $Camera/ClickRay.get_collider()
+		if clickable != null:
+			print_debug("wow")
+			clickable.click(self)
+	
 	var move = Vector3.ZERO
 	var sprinting = false
 	if Input.is_action_pressed("move_forward"):

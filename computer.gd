@@ -1,19 +1,10 @@
 extends Area
 
+var clicked = false
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-func clicked():
-	$computerOn.visible = false
-	$computerOf.visible = true
+func click(player):
+	if !clicked:
+		clicked = true
+		$computerOn.visible = false
+		$computerOf.visible = true
+		player.computers_left -= 1
