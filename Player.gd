@@ -9,7 +9,7 @@ onready var spookyman = Util.from_group("SpookyGuy", self)
 onready var sprint_resource = $CanvasLayer/outline/background/resource_bar
 onready var task_text = $CanvasLayer/Tasks/task
 var tired = false
-
+var secondEventTriggered = false
 var sprinting = false
 
 
@@ -48,7 +48,7 @@ func _physics_process(delta):
 		tired = true
 		$Timer.start()
 		
-	if (sprint_resource.rect_scale.x > 0 && sprinting && !tired):
+	if (sprint_resource.rect_scale.x > 0 && sprinting && !tired && secondEventTriggered):
 			sprint_resource.rect_scale.x -= .01
 			move_and_slide(move * sprint_speed, UP)
 	else:
