@@ -1,8 +1,8 @@
 extends Area
 
 var eventTriggered = false
-onready var spookyman = Util.from_group("SpookyGuy", self)
-onready var player = Util.from_group("Player", self)
+#onready 
+#onready 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,6 +15,8 @@ func _ready():
 
 func _on_Area_body_entered(body):
 	if(!eventTriggered):
+		var spookyman = Util.from_group("SpookyGuy", self)
+		var player = Util.from_group("Player", self)
 		eventTriggered = true
 		$eventGUI/Control.visible = true
 		spookyman.active = true

@@ -70,7 +70,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.60327, -1.06786, 2.15466 )
 ]]
 
 [node name="test-nav" parent="Navigation" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.062, 0.0152674, -0.107856 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
