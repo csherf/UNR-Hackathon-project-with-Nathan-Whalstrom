@@ -66,7 +66,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control2" type="ColorRect" parent="CanvasLayer"]
+[node name="gameover" type="ColorRect" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
@@ -74,13 +74,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="CanvasLayer/Control2"]
+[node name="Label" type="Label" parent="CanvasLayer/gameover"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 311.549
 margin_top = 237.997
 margin_right = -233.451
 margin_bottom = -227.003
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
