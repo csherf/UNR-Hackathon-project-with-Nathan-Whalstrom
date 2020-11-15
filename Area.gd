@@ -18,7 +18,7 @@ func _on_Area_body_entered(body):
 		eventTriggered = true
 		$Timer.start()
 		$eventGUI/Control.visible = true
-		spookyman.enabled = true
+		##spookyman.enabled = true
 	
 
 func _on_Timer_timeout():
