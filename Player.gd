@@ -6,6 +6,7 @@ export var sprint_speed = 4
 export var speed = 1.7
 export var look_speed = 0.5 / 9000.0
 onready var sprint_resource = $CanvasLayer/outline/background/resource_bar
+onready var task_text = $CanvasLayer/Tasks/task
 var tired = false
 
 var sprinting = false

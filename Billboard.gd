@@ -1,6 +1,7 @@
 extends MeshInstance
 
 func _process(delta):
-	rotation = get_viewport().get_camera().global_transform.basis.get_euler()
+	if get_viewport().get_camera() != null:
+		rotation = get_viewport().get_camera().global_transform.basis.get_euler()
 
 
