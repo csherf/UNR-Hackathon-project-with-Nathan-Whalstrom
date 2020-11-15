@@ -27,6 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Acm-hackathon 2"
+run/main_scene="res://menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

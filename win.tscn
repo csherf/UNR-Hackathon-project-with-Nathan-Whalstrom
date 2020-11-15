@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://slides/win_slide.png" type="Texture" id=1]
+[ext_resource path="res://win.gd" type="Script" id=2]
+[ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
 
 [node name="win" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -18,3 +25,16 @@ margin_right = 15.0
 margin_bottom = 15.0
 texture = ExtResource( 1 )
 expand = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 2.46446
+margin_top = 533.586
+margin_right = 193.464
+margin_bottom = 594.586
+custom_fonts/font = SubResource( 1 )
+text = "main menu"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
