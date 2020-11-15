@@ -34,4 +34,7 @@ margin_bottom = 594.586
 custom_fonts/font = SubResource( 1 )
 text = "main menu"
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
