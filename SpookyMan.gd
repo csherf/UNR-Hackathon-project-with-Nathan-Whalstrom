@@ -73,4 +73,4 @@ func _on_Exit_timer_timeout():
 
 func _on_Button_pressed():
 	get_tree().reload_current_scene()
-	
+	print("reload")
