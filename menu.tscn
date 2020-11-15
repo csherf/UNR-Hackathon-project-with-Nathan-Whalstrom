@@ -86,16 +86,18 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-anchor_top = 1.0
+anchor_top = 0.859
+anchor_right = 0.415
 anchor_bottom = 1.0
-margin_left = 5.64734
-margin_top = -71.6589
-margin_right = 400.647
-margin_bottom = -6.65894
+margin_left = -0.0158987
+margin_top = -0.273132
+margin_right = 0.0240784
+margin_bottom = -2.87311
 text = "music and sound credit:
 https://freesound.org/people/Lemoncreme/sounds/320526/
 https://freesound.org/people/Iwiploppenisse/sounds/156031/
-"
+https://freesound.org/people/bolkmar/sounds/417496/ by bolkmar
+https://freesound.org/people/Jay_You/sounds/460432/ by jay_you "
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -5,7 +5,7 @@ export (PackedScene) var scene
 
 
 func _ready():
-	pass
+	MusicController.play("res://tracks/elevator2.wav")
 
 
 func _on_startButton_pressed():
