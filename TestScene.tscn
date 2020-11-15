@@ -6,7 +6,6 @@
 [ext_resource path="res://computer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://second_event_trigger.tscn" type="PackedScene" id=5]
 [ext_resource path="res://NextLevelDoor.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scene1.tscn" type="PackedScene" id=7]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -17,6 +16,19 @@ fog_enabled = true
 fog_color = Color( 0, 0, 0, 1 )
 fog_depth_begin = 0.0
 fog_depth_end = 20.0
+
+[sub_resource type="PackedScene" id=3]
+_bundled = {
+"conn_count": 0,
+"conns": PoolIntArray(  ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Scene1", "Spatial", "level", "Player", "computer", "transform" ),
+"node_count": 3,
+"node_paths": [ NodePath("."), NodePath(".") ],
+"nodes": PoolIntArray( -1, -1, 1, 0, -1, 0, 1, 2, 1073741824, 0, 2147483647, 3, 0, 0, 0, 1073741825, 0, 2147483647, 4, 1, 1, 5, 2, 0 ),
+"variants": [ ExtResource( 1 ), ExtResource( 4 ), Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26501, 0.495996, -3.50637 ) ],
+"version": 2
+}
 
 [node name="TestScene" type="Spatial" groups=[
 "level",
@@ -77,4 +89,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.355009, -0.575181, 1.31466 
 
 [node name="NextLevelDoor" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6304, 0.506435, -11.3373 )
-scene = ExtResource( 7 )
+scene = SubResource( 3 )
