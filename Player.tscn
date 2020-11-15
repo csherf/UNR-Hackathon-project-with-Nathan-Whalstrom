@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=2]
@@ -10,11 +10,6 @@ radius = 0.5
 size = 30
 outline_size = 2
 outline_color = Color( 0.00392157, 0.00392157, 0.00392157, 1 )
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=3]
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
@@ -74,16 +69,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
-
-[node name="Tasks" type="Label" parent="."]
+[node name="Tasks" type="Label" parent="CanvasLayer"]
 anchor_right = 0.088
 anchor_bottom = 0.142
 margin_left = 7.07906
 margin_top = 7.07906
 margin_right = 6.96706
-margin_bottom = 6.87905
+margin_bottom = 6.87906
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.964706, 0.964706, 1 )
 text = "Tasks
@@ -93,32 +85,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="collect_paper" type="Label" parent="Tasks"]
-anchor_left = 0.1
-anchor_top = 0.471
-anchor_right = 2.289
-anchor_bottom = 0.635
-margin_top = -0.0349998
-margin_right = -0.0100098
-margin_bottom = 0.0249939
-custom_fonts/font = SubResource( 3 )
-text = "- Collect paper from printers: 3"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="shutdown_computers" type="Label" parent="Tasks"]
+[node name="task" type="Label" parent="CanvasLayer/Tasks"]
 anchor_left = 0.099
-anchor_top = 0.737
+anchor_top = 0.5
 anchor_right = 2.544
 anchor_bottom = 0.996
-margin_left = 0.0338469
-margin_top = 0.0182343
-margin_right = -0.0161591
-margin_bottom = 0.00323486
+margin_left = -1.96843
+margin_top = -1.1942
+margin_right = -2.01842
+margin_bottom = -21.3542
 custom_fonts/font = SubResource( 4 )
 text = "- Turn of computers: 3"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
