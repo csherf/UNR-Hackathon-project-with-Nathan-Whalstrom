@@ -27,7 +27,7 @@ ambient_light_sky_contribution = 0.0
 fog_enabled = true
 fog_color = Color( 0, 0, 0, 1 )
 fog_depth_begin = 0.0
-fog_depth_end = 10.0
+fog_depth_end = 12.5
 
 [node name="Level2" type="Spatial" groups=[
 "level",

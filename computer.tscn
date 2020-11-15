@@ -51,4 +51,4 @@ shape = SubResource( 4 )
 
 [node name="shutdown" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -15.0
+volume_db = -5.0
