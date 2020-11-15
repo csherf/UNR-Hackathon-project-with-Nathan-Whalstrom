@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/scary audio 1.wav-b532d947cfcb8df9bdd9da154815d40f.sample"
+
+[deps]
+
+source_file="res://tracks/scary audio 1.wav"
+dest_files=[ "res://.import/scary audio 1.wav-b532d947cfcb8df9bdd9da154815d40f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -29,6 +29,10 @@ _global_script_class_icons={
 config/name="Acm-hackathon 2"
 config/icon="res://icon.png"
 
+[autoload]
+
+MusicController="*res://MusicController.tscn"
+
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]

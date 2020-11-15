@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://MusicController.gd" type="Script" id=1]
+
+[node name="MusicController" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -31.403

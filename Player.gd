@@ -21,13 +21,13 @@ var computers_left = 0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	MusicController.play("res://tracks/elevator music.wav")
 
 func _input(event):
 	if event is InputEventMouseMotion && !stun:
 		rotation_degrees.y -= event.relative.x * OS.get_real_window_size().x * look_speed
 
 func _physics_process(delta):
-	
 	if !stun:
 		if Input.is_action_just_pressed("click"):
 			print_debug("click")
@@ -55,3 +55,4 @@ func _physics_process(delta):
 			if (sprint_resource.rect_scale.x < 1 && move.length() < 0.0001):
 				sprint_resource.rect_scale.x += sprint_gain * delta
 			move_and_slide(move * speed, UP)
+	
