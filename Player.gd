@@ -54,7 +54,8 @@ func _physics_process(delta):
 			sprint_resource.rect_scale.x += .005
 		move_and_slide(move * speed, UP)
 	
-
+##test to se of we both can work
 
 func _on_Timer_timeout():
 	tired = false
+

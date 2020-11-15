@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://RobotoMono-Italic-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://menu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 2 )
+
+[node name="menu" type="Node"]
+script = ExtResource( 3 )
+
+[node name="startButton" type="Button" parent="."]
+margin_left = 331.787
+margin_top = 368.38
+margin_right = 702.787
+margin_bottom = 470.38
+custom_fonts/font = SubResource( 1 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="."]
+margin_left = 234.539
+margin_top = 144.38
+margin_right = 824.539
+margin_bottom = 277.38
+custom_fonts/font = SubResource( 2 )
+text = "THE OFFICE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
