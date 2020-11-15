@@ -5,7 +5,7 @@ const UP = Vector3(0, 1.0, 0)
 export var look_offset = Vector3(0, 1.75, 0);
 export var move_speed = 2.0
 var active = false
-var target = 0
+var target = Vector3.ZERO
 
 func _physics_process(delta):
 	if(active): 
