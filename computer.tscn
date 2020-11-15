@@ -1,21 +1,25 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Billboard.tscn" type="PackedScene" id=1]
-[ext_resource path="res://computerTask.jpg" type="Texture" id=2]
+[ext_resource path="res://computerTask.png" type="Texture" id=2]
 [ext_resource path="res://computer.gd" type="Script" id=3]
-[ext_resource path="res://computerOf.jpg" type="Texture" id=4]
+[ext_resource path="res://computerOff.png" type="Texture" id=4]
+[ext_resource path="res://table.glb" type="PackedScene" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=5]
 flags_transparent = true
 albedo_texture = ExtResource( 4 )
 
-[sub_resource type="CylinderShape" id=3]
+[sub_resource type="CylinderShape" id=4]
 radius = 0.78893
 height = 1.63378
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.588527, 1, 0.624745 )
 
 [node name="computer" type="Area"]
 collision_layer = 32
@@ -23,13 +27,22 @@ collision_mask = 0
 script = ExtResource( 3 )
 
 [node name="computerOn" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 material/0 = SubResource( 1 )
 
 [node name="computerOf" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 visible = false
-material/0 = SubResource( 2 )
+material/0 = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="table" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.505274, 0 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.26818, 0 )
+shape = SubResource( 6 )
