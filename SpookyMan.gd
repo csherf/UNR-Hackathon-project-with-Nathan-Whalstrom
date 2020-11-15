@@ -16,7 +16,7 @@ var tax_fraud_intensity = 1.0
 func _process(delta):
 	$Billboard.visible = active
 	if tax_fraud:
-		$CanvasLayer/Control/Jumpscare2.rect_position = tax_fraud_intensity * tax_fraud_power * Vector2(randf() - 0.5, randf() - 0.5)
+		$CanvasLayer/Control/Jumpscare2.rect_position = tax_fraud_intensity * tax_fraud_power * Vector2(randf() - 0.5, randf() - 0.5) + Vector2(-171, -187)
 		tax_fraud_intensity -= delta * tax_cooldown
 		if tax_fraud_intensity < 0:
 			tax_fraud_intensity = 0
