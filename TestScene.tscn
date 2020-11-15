@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://SpookyMan.tscn" type="PackedScene" id=2]
 [ext_resource path="res://test-nav.glb" type="PackedScene" id=3]
 [ext_resource path="res://computer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://NextLevelDoor.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SphereMesh" id=1]
 
@@ -65,3 +66,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64421, 1.5487, 2.03455 )
 
 [node name="computer3" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64421, 1.5487, -1.2725 )
+
+[node name="NextLevelDoor" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.781, 0, 9.34245 )
