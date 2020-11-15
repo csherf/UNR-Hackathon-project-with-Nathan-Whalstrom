@@ -11,6 +11,8 @@ func _on_Area_body_entered(body):
 		spookyman.active = true
 		player.get_node("CanvasLayer/outline").visible = true
 		player.secondEventTriggered = true
+		MusicController.play("res://tracks/creep sound2.wav")
+		MusicController.increaseVol()
 		$Timer.start()
 
 func _on_Timer_timeout():
