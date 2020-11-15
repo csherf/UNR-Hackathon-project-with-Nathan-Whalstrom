@@ -13,7 +13,7 @@
 extents = Vector3( 1, 7, 2 )
 
 [sub_resource type="CylinderShape" id=2]
-radius = 4.44797
+radius = 3.60769
 height = 13.6696
 
 [sub_resource type="PanoramaSky" id=3]
