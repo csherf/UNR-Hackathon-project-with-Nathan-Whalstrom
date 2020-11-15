@@ -58,9 +58,9 @@ func _physics_process(delta):
 		move_and_slide(move * speed, UP)
 	
 ##second level sprinting
-func second_level():
+func second_level_event():
 	secondLevel = true
-	
+	spookyman.active = true
 
 func _on_Timer_timeout():
 	tired = false
