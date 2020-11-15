@@ -14,6 +14,7 @@ func click(player):
 		clicked = true
 		$computerOn.visible = false
 		$computerOf.visible = true
+		MusicController.play("res://tracks/Shutdown Sound.wav")
 		player.computers_left -= 1
 		if player.computers_left > 0:
 			player.task_text.text = "- Turn off computers: " + str(player.computers_left)

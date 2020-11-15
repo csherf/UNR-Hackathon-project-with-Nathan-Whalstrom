@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Shutdown Sound.wav-5e07210cda88cf5b00974e31e7554dbf.sample"
+
+[deps]
+
+source_file="res://tracks/Shutdown Sound.wav"
+dest_files=[ "res://.import/Shutdown Sound.wav-5e07210cda88cf5b00974e31e7554dbf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
