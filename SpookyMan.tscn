@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://test.png" type="Texture" id=1]
 [ext_resource path="res://Billboard.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://jumpscare0.png" type="Texture" id=4]
 [ext_resource path="res://jumpscare1.png" type="Texture" id=5]
 [ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://tracks/piano_slam.wav" type="AudioStream" id=7]
+[ext_resource path="res://tracks/explosion.wav" type="AudioStream" id=8]
 
 [sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
@@ -114,6 +116,12 @@ one_shot = true
 [node name="Exit_timer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
+
+[node name="jumpscare" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 [connection signal="body_entered" from="." to="." method="_on_SpookyMan_body_entered"]
 [connection signal="timeout" from="Anim" to="." method="_on_Anim_timeout"]
 [connection signal="pressed" from="CanvasLayer/gameover/Button" to="." method="_on_Button_pressed"]

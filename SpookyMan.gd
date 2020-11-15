@@ -57,6 +57,7 @@ func _on_SpookyMan_body_entered(body):
 	active = false
 	Util.from_group("Player", self).stun = true
 	$Timer.start()
+	$jumpscare.play()
 
 
 func _on_Timer_timeout():
@@ -64,6 +65,7 @@ func _on_Timer_timeout():
 	$CanvasLayer/Control/Jumpscare2.visible = true
 	tax_fraud = true
 	$Exit_timer.start()
+	$explosion.play()
 
 
 func _on_Exit_timer_timeout():
