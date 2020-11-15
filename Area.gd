@@ -17,7 +17,7 @@ func _on_Area_body_entered(body):
 	if(!eventTriggered):
 		eventTriggered = true
 		$Timer.start()
-		$eventGUI.visible = true
+		$eventGUI.visble = true
 	
 	
 
