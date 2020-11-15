@@ -68,4 +68,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64421, 1.5487, 2.03455 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64421, 1.5487, -1.2725 )
 
 [node name="second_event_trigger" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.724844, -0.302199, 1.07798 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.355009, -0.575181, 1.31466 )
