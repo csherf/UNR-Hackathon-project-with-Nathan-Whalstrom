@@ -3,7 +3,7 @@ extends Area
 const UP = Vector3(0, 1.0, 0)
 
 export var look_offset = Vector3(0, 1.75, 0);
-export var move_speed = 2.0
+export var move_speed = 5.5
 export var tax_fraud_power = 500.0
 export var tax_cooldown = 0.5
 
@@ -16,6 +16,7 @@ var tax_fraud = false
 var tax_fraud_intensity = 1.0
 
 func _process(delta):
+	$Billboard.visible = active
 	if tax_fraud:
 		$CanvasLayer/Control/Jumpscare2.rect_position = tax_fraud_intensity * tax_fraud_power * Vector2(randf() - 0.5, randf() - 0.5)
 		tax_fraud_intensity -= delta * tax_cooldown
@@ -34,7 +35,7 @@ func _physics_process(delta):
 				if (target - translation).length() < move_speed * delta:
 					var waypoints = get_tree().get_nodes_in_group("Waypoint")
 					if waypoints.size() > 0:
-						target = waypoints[randi() % waypoints.size()]
+						target = waypoints[randi() % waypoints.size()].translation
 			elif player != null:
 				target = player.translation
 				
@@ -56,6 +57,7 @@ func _on_SpookyMan_body_entered(body):
 	$CanvasLayer/Control/Jumpscare.visible = true
 	$Billboard.visible = false
 	active = false
+	Util.from_group("Player", self).stun = true
 	$Timer.start()
 
 

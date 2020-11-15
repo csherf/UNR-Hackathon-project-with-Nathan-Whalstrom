@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Area.gd" type="Script" id=1]
 [ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=2]
@@ -9,10 +9,6 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
-
-[sub_resource type="CylinderShape" id=3]
-radius = 1.15308
-height = 3.27594
 
 [node name="second_event_trigger" type="Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00443959, 0.00911236, -0.00191689 )
@@ -62,9 +58,5 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
-
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.272927, 0.521282, 0.193753 )
-shape = SubResource( 3 )
 [connection signal="body_entered" from="." to="." method="_on_Area_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
