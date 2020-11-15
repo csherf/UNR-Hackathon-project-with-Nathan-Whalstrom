@@ -7,8 +7,6 @@ export var move_speed = 5.5
 export var tax_fraud_power = 500.0
 export var tax_cooldown = 0.5
 
-onready var reset_copy = Util.from_group("level", self).duplicate(DUPLICATE_USE_INSTANCING)
-
 var active = false
 var target = Vector3.ZERO
 

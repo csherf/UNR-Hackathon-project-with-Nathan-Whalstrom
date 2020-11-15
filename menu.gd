@@ -9,8 +9,7 @@ func _ready():
 
 
 func _on_startButton_pressed():
-	get_parent().add_child(scene.instance())
-	queue_free()
+	get_tree().change_scene_to(scene)
 
 func _on_quitButton_pressed():
 	get_tree().quit()

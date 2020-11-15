@@ -122,9 +122,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1.5, -27 )
 [node name="computer25" parent="Computer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 1.5, -27 )
 
-[node name="computer19" parent="Computer" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, -74 )
-
 [node name="computer22" parent="Computer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -23 )
 
@@ -133,12 +130,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -25 )
 
 [node name="computer28" parent="Computer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -25 )
-
-[node name="computer13" parent="Computer" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1.5, -71 )
-
-[node name="computer3" parent="Computer" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.5, -2 )
 
 [node name="computer29" parent="Computer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1.5, -7 )
