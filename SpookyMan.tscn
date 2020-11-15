@@ -42,17 +42,18 @@ shape = SubResource( 2 )
 [node name="Control" type="Control" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -984.0
-margin_bottom = -560.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Jumpscare" type="TextureRect" parent="CanvasLayer/Control"]
 visible = false
-anchor_right = 25.532
-anchor_bottom = 15.244
-margin_right = 0.719971
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.5118
+margin_top = 81.0211
+margin_right = -31.4882
+margin_bottom = 21.0211
 texture = ExtResource( 4 )
 stretch_mode = 6
 __meta__ = {
@@ -61,9 +62,12 @@ __meta__ = {
 
 [node name="Jumpscare2" type="TextureRect" parent="CanvasLayer/Control"]
 visible = false
-anchor_right = 25.532
-anchor_bottom = 15.244
-margin_right = 0.720703
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -175.265
+margin_top = -187.079
+margin_right = 160.735
+margin_bottom = 152.921
 texture = ExtResource( 5 )
 stretch_mode = 6
 __meta__ = {
@@ -108,7 +112,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="Exit_timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 5.0
 one_shot = true
 [connection signal="body_entered" from="." to="." method="_on_SpookyMan_body_entered"]
 [connection signal="timeout" from="Anim" to="." method="_on_Anim_timeout"]
