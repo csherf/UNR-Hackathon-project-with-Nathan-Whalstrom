@@ -9,7 +9,6 @@
 
 [sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
-flags_unshaded = true
 albedo_texture = ExtResource( 1 )
 
 [sub_resource type="CylinderShape" id=2]
