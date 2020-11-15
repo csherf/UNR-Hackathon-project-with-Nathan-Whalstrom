@@ -5,7 +5,6 @@ const UP = Vector3(0, 1.0, 0)
 export var sprint_speed = 4
 export var speed = 1.7
 export var look_speed = 0.5 / 9000.0
-var secondLevel = false
 onready var spookyman = Util.from_group("SpookyGuy", self)
 onready var sprint_resource = $CanvasLayer/outline/background/resource_bar
 onready var task_text = $CanvasLayer/Tasks/task
@@ -57,10 +56,6 @@ func _physics_process(delta):
 			sprint_resource.rect_scale.x += .005
 		move_and_slide(move * speed, UP)
 	
-##second level sprinting
-func second_level_event():
-	secondLevel = true
-	spookyman.active = true
 
 func _on_Timer_timeout():
 	tired = false

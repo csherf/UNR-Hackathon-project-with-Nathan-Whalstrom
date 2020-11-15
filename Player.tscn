@@ -12,7 +12,7 @@ outline_size = 2
 outline_color = Color( 0.00392157, 0.00392157, 0.00392157, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
@@ -94,7 +94,7 @@ margin_left = -1.96843
 margin_top = -1.1942
 margin_right = -2.01842
 margin_bottom = -21.3542
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "- Turn of computers: 3"
 __meta__ = {
 "_edit_use_anchors_": false
