@@ -29,12 +29,12 @@ script = ExtResource( 3 )
 scene = ExtResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-anchor_right = 0.937
-anchor_bottom = 1.062
+anchor_top = 1.027
+anchor_bottom = 1.027
 margin_left = -44.0
-margin_top = -45.0
-margin_right = 71.512
-margin_bottom = -21.2
+margin_top = -661.2
+margin_right = 1031.0
+margin_bottom = -0.200012
 texture = ExtResource( 5 )
 expand = true
 __meta__ = {
@@ -81,6 +81,21 @@ margin_bottom = 0.27417
 custom_fonts/font = SubResource( 3 )
 text = "QUIT"
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 5.64734
+margin_top = -71.6589
+margin_right = 400.647
+margin_bottom = -6.65894
+text = "music and sound credit:
+https://freesound.org/people/Lemoncreme/sounds/320526/
+https://freesound.org/people/Iwiploppenisse/sounds/156031/
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }

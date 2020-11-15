@@ -4,10 +4,14 @@
 [ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-size = 75
+size = 60
+outline_size = 10
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [node name="second_event_trigger" type="Area"]
@@ -33,22 +37,22 @@ anchor_left = 0.191
 anchor_top = 0.448
 anchor_right = 0.849
 anchor_bottom = 0.64
-margin_left = 15.8308
-margin_top = 0.130157
-margin_right = 664.511
-margin_bottom = 92.4502
+margin_left = 95.3195
+margin_top = 124.981
+margin_right = -39.7885
+margin_bottom = 109.974
 rect_rotation = 0.381148
 custom_fonts/font = SubResource( 1 )
-text = "They are coming"
+text = "he is coming"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="howToSprint" type="Label" parent="eventGUI/Control"]
-margin_left = 5.0
-margin_top = 472.0
-margin_right = 226.0
-margin_bottom = 507.0
+margin_left = 2.77429
+margin_top = 521.41
+margin_right = 223.774
+margin_bottom = 556.41
 custom_fonts/font = SubResource( 2 )
 text = "Presss shift to sprint"
 __meta__ = {
@@ -56,7 +60,7 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 4.0
 one_shot = true
 [connection signal="body_entered" from="." to="." method="_on_Area_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
