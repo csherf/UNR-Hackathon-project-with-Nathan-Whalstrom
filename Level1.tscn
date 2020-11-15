@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://level1.glb" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Level2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://computer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://skybox.png" type="Texture" id=6]
+[ext_resource path="res://TableProp.tscn" type="PackedScene" id=7]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 6 )
@@ -50,3 +51,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.5, -11 )
 
 [node name="computer5" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -16 )
+
+[node name="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -14 )
