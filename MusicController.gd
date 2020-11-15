@@ -10,8 +10,10 @@ onready var _player = $AudioStreamPlayer
 #func _ready():
 #	play("res://tracks/elevator music.wav") # Replace with function body.
 
+func increaseVol():
+	_player.volume_db = -5.0
+
 func play(track_url : String):
-	stop()
 	var new_track = load(track_url)
 	_player.stream = new_track
 	_player.play()
