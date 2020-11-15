@@ -83,10 +83,10 @@ __meta__ = {
 [node name="Label" type="Label" parent="CanvasLayer/gameover"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 83.479
-margin_top = 120.398
-margin_right = -148.521
-margin_bottom = -329.602
+margin_left = 125.479
+margin_top = 110.398
+margin_right = -106.521
+margin_bottom = -339.602
 custom_fonts/font = SubResource( 3 )
 text = "GAMEOVER
 
@@ -95,12 +95,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button" type="Button" parent="CanvasLayer/gameover"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 391.0
+margin_top = 334.0
+margin_right = -402.0
+margin_bottom = -214.0
+text = "try again"
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+one_shot = true
 
 [node name="Exit_timer" type="Timer" parent="."]
-wait_time = 7.0
+wait_time = 3.0
+one_shot = true
 [connection signal="body_entered" from="." to="." method="_on_SpookyMan_body_entered"]
 [connection signal="timeout" from="Anim" to="." method="_on_Anim_timeout"]
+[connection signal="pressed" from="CanvasLayer/gameover/Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Exit_timer" to="." method="_on_Exit_timer_timeout"]
