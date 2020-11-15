@@ -35,3 +35,7 @@ func _physics_process(delta):
 
 func _on_Anim_timeout():
 	$Billboard.scale.x *= -1
+
+
+func _on_SpookyMan_body_entered(body):
+	$CanvasLayer/Control/Jumpscare.visible = true

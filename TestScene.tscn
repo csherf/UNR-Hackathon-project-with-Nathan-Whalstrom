@@ -47,7 +47,7 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="SpookyMan" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.60327, 0, 2.15466 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.60327, -1.06786, 2.15466 )
 
 [node name="Navigation" type="Navigation" parent="." groups=[
 "MainNav",
