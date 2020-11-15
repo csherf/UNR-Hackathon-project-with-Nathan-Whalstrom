@@ -15,7 +15,7 @@ func _physics_process(delta):
 		var nav = Util.from_group("MainNav", self)
 		if nav != null:
 			
-			if get_world().direct_space_state.intersect_ray(translation + look_offset, player.translation + look_offset, [self], collision_mask):
+			if get_world().direct_space_state.intersect_ray(translation + look_offset, player.translation + look_offset, [self], 1):
 				if (target - translation).length() < move_speed * delta:
 					var waypoints = get_tree().get_nodes_in_group("Waypoint")
 					if waypoints.size() > 0:

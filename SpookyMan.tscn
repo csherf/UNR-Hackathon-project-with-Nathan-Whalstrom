@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://test.png" type="Texture" id=1]
 [ext_resource path="res://Billboard.tscn" type="PackedScene" id=2]
 [ext_resource path="res://SpookyMan.gd" type="Script" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://jumpscare0.png" type="Texture" id=4]
+[ext_resource path="res://jumpscare1.png" type="Texture" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
@@ -29,7 +30,7 @@ wait_time = 0.5
 autostart = true
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18084, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72676, 0 )
 shape = SubResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -49,6 +50,17 @@ anchor_right = 25.532
 anchor_bottom = 15.244
 margin_right = 0.719971
 texture = ExtResource( 4 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jumpscare2" type="TextureRect" parent="CanvasLayer/Control"]
+visible = false
+anchor_right = 25.532
+anchor_bottom = 15.244
+margin_right = 0.719971
+texture = ExtResource( 5 )
 stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
