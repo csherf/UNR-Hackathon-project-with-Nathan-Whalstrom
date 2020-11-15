@@ -12,7 +12,9 @@ albedo_texture = ExtResource( 1 )
 [sub_resource type="CylinderShape" id=2]
 height = 3.29054
 
-[node name="SpookyMan" type="Area"]
+[node name="SpookyMan" type="Area" groups=[
+"SpookyGuy",
+]]
 collision_layer = 0
 script = ExtResource( 3 )
 
