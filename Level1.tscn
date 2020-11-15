@@ -7,12 +7,12 @@
 [ext_resource path="res://computer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://skybox.png" type="Texture" id=6]
 
-[sub_resource type="PanoramaSky" id=2]
+[sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 6 )
 
-[sub_resource type="Environment" id=1]
+[sub_resource type="Environment" id=2]
 background_mode = 2
-background_sky = SubResource( 2 )
+background_sky = SubResource( 1 )
 ambient_light_color = Color( 1, 1, 1, 1 )
 ambient_light_sky_contribution = 0.0
 fog_enabled = true
@@ -25,7 +25,7 @@ fog_depth_end = 25.0
 ]]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 1 )
+environment = SubResource( 2 )
 
 [node name="level1" parent="." instance=ExtResource( 1 )]
 

@@ -7,8 +7,8 @@ extends Control
 onready var _player = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	play("res://tracks/elevator music.wav") # Replace with function body.
+#func _ready():
+#	play("res://tracks/elevator music.wav") # Replace with function body.
 
 func play(track_url : String):
 	stop()
