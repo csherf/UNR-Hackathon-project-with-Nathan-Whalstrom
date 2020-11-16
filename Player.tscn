@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=2]
@@ -15,6 +15,14 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=3]
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 120
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
 font_data = ExtResource( 2 )
 
 [node name="Player" type="KinematicBody" groups=[
@@ -100,3 +108,51 @@ text = "- there are no real tasks in this world"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Pause" type="Label" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.339
+anchor_top = 0.258
+anchor_right = 0.691
+anchor_bottom = 0.523
+margin_left = 0.187775
+margin_top = 0.0797272
+margin_right = -0.260254
+margin_bottom = 0.0797424
+custom_fonts/font = SubResource( 4 )
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="Button" parent="CanvasLayer/Pause"]
+anchor_left = 0.153
+anchor_top = 1.108
+anchor_right = 0.799
+anchor_bottom = 1.46
+margin_left = 0.103344
+margin_top = -0.0138092
+margin_right = 0.543579
+margin_bottom = 0.0182037
+rect_scale = Vector2( 0.99706, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Resume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" type="Button" parent="CanvasLayer/Pause"]
+anchor_left = 0.275
+anchor_top = 1.591
+anchor_right = 0.666
+anchor_bottom = 1.762
+margin_top = 0.0309906
+margin_right = -7.76001
+margin_bottom = -7.15802
+rect_scale = Vector2( 1.05906, 1.3587 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CanvasLayer/Pause/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/Pause/quit" to="." method="_on_Quit_pressed"]

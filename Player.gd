@@ -39,6 +39,8 @@ func _physics_process(delta):
 		
 		var move = Vector3.ZERO
 		var sprinting = false
+		if Input.is_action_pressed("ui_cancel"):
+			pause()
 		if Input.is_action_pressed("move_forward"):
 			move += transform.basis.z
 		elif Input.is_action_pressed("move_backward"):
@@ -57,3 +59,18 @@ func _physics_process(delta):
 				sprint_resource.rect_scale.x += sprint_gain * delta
 			move_and_slide(move * speed, UP)
 	
+func pause():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Util.from_group("Player", self).stun = true
+	$CanvasLayer/Pause.visible = true
+	
+	
+func _on_Resume_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Util.from_group("Player", self).stun = false
+	$CanvasLayer/Pause.visible = false
+
+
+
+func _on_Quit_pressed():
+	get_tree().quit() 
