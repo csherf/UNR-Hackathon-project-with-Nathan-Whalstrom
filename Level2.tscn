@@ -41,9 +41,6 @@ fog_depth_end = 12.5
 [node name="level2" parent="Navigation" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00639725, -0.0233526, 0.0196877 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, 0, 0 )
-
 [node name="Waypoints" type="Spatial" parent="."]
 
 [node name="Waypoint" parent="Waypoints" instance=ExtResource( 6 )]
@@ -78,6 +75,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175817, 0, -24.4226 )
 
 [node name="Waypoint11" parent="Waypoints" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100542, 0, -1.38854 )
+
+[node name="SpookyMan" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.8856 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, 0, 0 )
 
 [node name="Computer" type="Spatial" parent="."]
 
@@ -161,9 +164,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.5, -46 )
 
 [node name="computer33" parent="Computer" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.5, -46 )
-
-[node name="SpookyMan" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.8856 )
 
 [node name="second_event_trigger" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.5003 )
